@@ -92,6 +92,15 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -118,5 +127,8 @@ live2d:
 search:
   path: search.xml
   field: post
-  content: true
   format: html
+  limit: 10000
+
+admin:
+  deployCommand: ./admin_script/hexo-d.sh
